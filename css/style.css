@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+   --main-color:#8e44ad;
+   --red:#e74c3c;
+   --light-color:#666;
+   --light-bg:#f5f5f5;
+   --black:#dcb5ff;
+   --white:#fff;
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --border:.2rem solid var(--black);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+}
+
+html{
+   font-size: 62.5%;
+}
+
+body{
+   background-image: url("../images/bg1.jpg");
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   overflow-x: hidden;
+   min-height: 100vh;
+}
+
+section{
+   padding:2rem;
+   margin: 0 auto;
+   max-width: 1200px;
+}
+
+.heading{
+   text-align: center;
+   font-size: 3rem;
+   color:#dcb5ff;
+   text-transform: capitalize;
+   margin-bottom: 2rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn{
+   display: block;
+   width: 100%;
+   margin-top: 1rem;
+   padding:1rem 3rem;
+   cursor: pointer;
+   font-size: 1.8rem;
+   border-radius: .5rem;
+   color:var(--white);
+   text-align: center;
+   text-transform: capitalize;
+   background-color: var(--main-color);
+   transition: .3s;
+}
+
+.btn:hover{
+   background-color: var(--black);
+}
+
+/* ================= FORM ================= */
+
+.form-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.form-container form{
+   width: 100%;
+   max-width: 45rem;
+   background-color: rgba(255, 255, 255, 0.07);
+   border-radius: 20px;
+   backdrop-filter: blur(10px);
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+   padding: 4rem;
+}
+
+.form-container form h3{
+   text-align: center;
+   color: #fff;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+
+.form-container form .box{
+   width: 100%;
+   background-color: rgba(255, 255, 255, 0.07);
+   border-radius: 10px;
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   padding: 1.2rem;
+   font-size: 1.6rem;
+   color:#fff;
+   margin:1rem 0;
+}
+
+.form-container form p{
+   text-align: center;
+   padding-top: 1rem;
+   font-size: 1.5rem;
+   color:#fff;
+}
+
+.form-container form p a{
+   color: var(--main-color);
+}
+
+/* ================= PLAYLIST ================= */
+
+.playlist .box-container{
+   max-width: 50rem;
+   height: 85vh;
+   overflow-y: auto;
+   margin: 3rem auto;
+   background-color: rgba(255, 255, 255, 0.07);
+   border-radius: 20px;
+   backdrop-filter: blur(10px);
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+   padding: 3rem;
+}
+
+.playlist .box-container .box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: rgba(255, 255, 255, 0.07);
+   border-radius: 15px;
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   padding: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+.playlist .box-container .box .album{
+   height: 90px;
+   width: 90px;
+   border-radius: 10px;
+}
+
+.playlist .box-container .box .name{
+   font-size: 1.8rem;
+   color:#fff;
+}
+
+.playlist .box-container .box .artist{
+   font-size: 1.4rem;
+   color:var(--main-color);
+}
+
+.playlist .box-container .box .flex{
+   display: flex;
+   gap: 1rem;
+}
+
+.playlist .box-container .box .flex i{
+   font-size: 2rem;
+   color: #fff;
+   cursor: pointer;
+}
+
+/* ================= MUSIC PLAYER ================= */
+
+.music-player{
+   background-image: url("../images/bg.jpg");
+   background-size: cover;
+   background-position: center;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top:0; left:0; right:0; bottom:0;
+   z-index: 1000;
+}
+
+.music-player.active{
+   display: flex;
+}
+
+.music-player .box{
+   background-color: rgba(255, 255, 255, 0.07);
+   border-radius: 20px;
+   backdrop-filter: blur(10px);
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+   width: 35rem;
+   text-align: center;
+   padding: 2rem;
+}
+
+.music-player .box .album{
+   width: 90%;
+   margin: 2rem 0;
+   animation: beat 2s infinite;
+}
+
+@keyframes beat {
+   0%,100%{ transform: scale(.9); }
+   50%{ transform: scale(1); }
+}
+
+.music-player .box .name{
+   font-size: 1.8rem;
+   color: var(--main-color);
+}
+
+.music-player .box .artist{
+   font-size: 1.5rem;
+   color: #fff;
+   margin: .5rem 0;
+}
+
+.music-player .box .music{
+   width: 100%;
+   margin-top: 1rem;
+}
+
+.music-player #close{
+   position: absolute;
+   top:2rem; 
+   right:2rem;
+   cursor: pointer;
+   color:#fff;
+   font-size: 4rem;
+}

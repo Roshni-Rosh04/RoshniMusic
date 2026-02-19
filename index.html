@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Music Playlist</title>
+
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div style="position:fixed; top:15px; right:20px; z-index:1000; display:flex; gap:15px; align-items:center;">
+   <span id="welcomeUser" style="color:white; font-size:1.6rem;"></span>
+   <button onclick="logout()" class="btn" style="width:auto; padding:8px 15px;">Logout</button>
+</div>
+
+<section class="playlist">
+
+   <h3 class="heading">Music Playlist</h3>
+
+   <div class="box-container">
+
+      <!-- SONG 1 -->
+      <div class="box">
+         <img src="uploaded_album/download.jpeg" class="album">
+         <div>
+            <div class="name">Ve Haniya</div>
+            <div class="artist">Ravi dubey</div>
+         </div>
+         <div class="flex">
+            <div class="play" 
+                 data-src="uploaded_music/Ve Haniya Ve Dil Janiya Udaariyaan - PagalWorld.mp3"
+                 data-album="uploaded_album/download.jpeg">
+               <i class="fas fa-play"></i>
+            </div>
+            <a href="uploaded_music/Ve Haniya Ve Dil Janiya Udaariyaan - PagalWorld.mp3" download>
+               <i class="fas fa-download"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- SONG 2 -->
+      <div class="box">
+         <img src="uploaded_album/download (1).jpeg" class="album">
+         <div>
+            <div class="name">Softly</div>
+            <div class="artist">Karan Aujla</div>
+         </div>
+         <div class="flex">
+            <div class="play" 
+                 data-src="uploaded_music/Softly - Karan Aujla(MixJio.In).mp3"
+                 data-album="uploaded_album/download (1).jpeg">
+               <i class="fas fa-play"></i>
+            </div>
+            <a href="uploaded_music/Softly - Karan Aujla(MixJio.In).mp3" download>
+               <i class="fas fa-download"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- SONG 3 -->
+      <div class="box">
+         <img src="uploaded_album/maxresdefault.jpg" class="album">
+         <div>
+            <div class="name">Ishq</div>
+            <div class="artist">Faheem Abdullah</div>
+         </div>
+         <div class="flex">
+            <div class="play" 
+                 data-src="uploaded_music/Main Ishq Likhu Tujhe Ho Jaye - PagalWorld.mp3"
+                 data-album="uploaded_album/Maxresdefault.jpg">
+               <i class="fas fa-play"></i>
+            </div>
+            <a href="uploaded_music/Main Ishq Likhu Tujhe Ho Jaye - PagalWorld.mp3" download>
+               <i class="fas fa-download"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- SONG 4 -->
+      <div class="box">
+         <img src="uploaded_album/2.jpg" class="album">
+         <div>
+            <div class="name">Yaariya</div>
+            <div class="artist">Kamal Khan</div>
+         </div>
+         <div class="flex">
+            <div class="play" 
+                 data-src="uploaded_music/YaariyanDiKasamRingtoneMp3byKamalKhan565399608.mp3"
+                 data-album="uploaded_album/2.jpg">
+               <i class="fas fa-play"></i>
+            </div>
+            <a href="uploaded_music/YaariyanDiKasamRingtoneMp3byKamalKhan565399608.mp3" download>
+               <i class="fas fa-download"></i>
+            </a>
+         </div>
+      </div>
+
+<!-- SONG 5 -->
+      <div class="box">
+         <img src="uploaded_album/0.jpg" class="album">
+         <div>
+            <div class="name">EMDI</div>
+            <div class="artist">veronica</div>
+         </div>
+         <div class="flex">
+            <div class="play" 
+                 data-src="uploaded_music/EMDI - Veronica.mp3"
+                 data-album="uploaded_album/0.jpg">
+               <i class="fas fa-play"></i>
+            </div>
+            <a href="uploaded_music/EMDI - Veronica.mp3" download>
+               <i class="fas fa-download"></i>
+            </a>
+         </div>
+      </div>
+
+
+   </div>
+
+</section>
+
+<!-- MUSIC PLAYER -->
+<div class="music-player">
+   <i class="fas fa-times" id="close"></i>
+
+   <div class="box">
+      <img src="uploaded_album/download.jpeg" class="album">
+      <div class="name"></div>
+      <div class="artist"></div>
+      <audio src="" controls class="music"></audio>
+   </div>
+</div>
+
+<script src="js/script.js"></script>
+
+<script>
+// 🔐 Login Check
+const storedUser = JSON.parse(localStorage.getItem("demoUser"));
+
+if(!storedUser){
+   window.location.href = "login.html";
+}else{
+   document.getElementById("welcomeUser").innerText = 
+      "Welcome, " + storedUser.username;
+}
+
+// 🚪 Logout
+function logout(){
+   localStorage.removeItem("demoUser");
+   window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

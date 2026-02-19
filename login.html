@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="form-container">
+   <form id="loginForm">
+      <h3>Login</h3>
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <input type="password" id="password" placeholder="Enter your password" required>
+      <input type="submit" value="Login" class="btn">
+      <p>Don't have an account? <a href="signup.html">Signup</a></p>
+   </form>
+</section>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+   e.preventDefault();
+
+   const email = document.getElementById("email").value;
+   const password = document.getElementById("password").value;
+
+   const storedUser = JSON.parse(localStorage.getItem("demoUser"));
+
+   if(storedUser && storedUser.email === email && storedUser.password === password){
+      alert("Login Successful!");
+      window.location.href = "Index.html";
+   } else {
+      alert("Incorrect Email or Password!");
+   }
+});
+</script>
+
+
+</body>
+</html>
