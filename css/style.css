@@ -27,6 +27,7 @@ html{
 
 body{
    background-image: url("../images/bg1.jpg");
+   background-color: #e74c3c;
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
