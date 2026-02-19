@@ -9,35 +9,43 @@
 </head>
 <body>
 
-<section class="form-container">
+<section class="auth-form">
+
    <form id="signupForm">
       <h3>Signup</h3>
-      <input type="text" id="username" placeholder="Enter your username" required>
-      <input type="email" id="email" placeholder="Enter your email" required>
-      <input type="password" id="password" placeholder="Enter your password" required>
+
+      <input type="text" id="name" placeholder="Enter your name" class="box" required>
+      <input type="email" id="email" placeholder="Enter your email" class="box" required>
+      <input type="password" id="password" placeholder="Enter your password" class="box" required>
+
       <input type="submit" value="Signup" class="btn">
-      <p>Already have an account? <a href="login.html">Login</a></p>
+
+      <p style="color:white; margin-top:1rem;">
+         Already have an account?
+         <a href="login.html" style="color:#8e44ad;">Login</a>
+      </p>
    </form>
+
 </section>
+
 
 <script>
 document.getElementById("signupForm").addEventListener("submit", function(e){
    e.preventDefault();
 
-   const username = document.getElementById("username").value;
+   const name = document.getElementById("name").value;
    const email = document.getElementById("email").value;
    const password = document.getElementById("password").value;
 
-   // Save to localStorage (Demo only)
    const user = {
-      username: username,
+      name: name,
       email: email,
       password: password
    };
 
    localStorage.setItem("demoUser", JSON.stringify(user));
 
-   alert("Registered Successfully!");
+   alert("Signup Successful!");
    window.location.href = "login.html";
 });
 </script>

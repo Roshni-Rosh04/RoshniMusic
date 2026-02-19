@@ -68,6 +68,43 @@ section{
 .btn:hover{
    background-color: var(--black);
 }
+/* ================= AUTH FORM ================= */
+
+.auth-form{
+   max-width: 45rem;
+   margin: 8rem auto;
+   padding: 3rem;
+   background: rgba(255,255,255,0.08);
+   backdrop-filter: blur(10px);
+   border-radius: 15px;
+   box-shadow: 0 0 40px rgba(0,0,0,0.4);
+   text-align: center;
+}
+
+.auth-form h3{
+   font-size: 2.5rem;
+   color: #fff;
+   margin-bottom: 2rem;
+}
+
+.auth-form .box{
+   width: 100%;
+   padding: 1.2rem;
+   margin: 1rem 0;
+   font-size: 1.6rem;
+   border-radius: .5rem;
+   background: rgba(255,255,255,0.2);
+   color: #fff;
+}
+
+.auth-form .box::placeholder{
+   color: #ddd;
+}
+
+.auth-form .btn{
+   margin-top: 2rem;
+}
+
 
 /* ================= PLAYLIST ================= */
 
