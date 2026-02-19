@@ -13,15 +13,18 @@
 
 *{
    font-family: 'Nunito', sans-serif;
-   margin:0; padding:0;
+   margin:0;
+   padding:0;
    box-sizing: border-box;
-   outline: none; border:none;
+   outline: none;
+   border:none;
    text-decoration: none;
 }
 
 html{
    font-size: 62.5%;
 }
+
 body{
    background-image: url("../images/bg1.jpg");
    background-size: cover;
@@ -30,7 +33,6 @@ body{
    background-attachment: fixed;
    min-height: 100vh;
 }
-
 
 section{
    padding:2rem;
@@ -67,59 +69,9 @@ section{
    background-color: var(--black);
 }
 
-/* ================= FORM ================= */
-
-.form-container{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-height: 100vh;
-}
-
-.form-container form{
-   width: 100%;
-   max-width: 45rem;
-   background-color: rgba(255, 255, 255, 0.07);
-   border-radius: 20px;
-   backdrop-filter: blur(10px);
-   border: 2px solid rgba(255, 255, 255, 0.1);
-   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-   padding: 4rem;
-}
-
-.form-container form h3{
-   text-align: center;
-   color: #fff;
-   font-size: 2.5rem;
-   margin-bottom: 2rem;
-}
-
-.form-container form .box{
-   width: 100%;
-   background-color: rgba(255, 255, 255, 0.07);
-   border-radius: 10px;
-   border: 2px solid rgba(255, 255, 255, 0.1);
-   padding: 1.2rem;
-   font-size: 1.6rem;
-   color:#fff;
-   margin:1rem 0;
-}
-
-.form-container form p{
-   text-align: center;
-   padding-top: 1rem;
-   font-size: 1.5rem;
-   color:#fff;
-}
-
-.form-container form p a{
-   color: var(--main-color);
-}
-
 /* ================= PLAYLIST ================= */
 
 .playlist .box-container{
-   
    max-width: 50rem;
    height: 85vh;
    overflow-y: auto;
@@ -180,7 +132,10 @@ section{
    align-items: center;
    justify-content: center;
    position: fixed;
-   top:0; left:0; right:0; bottom:0;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
    z-index: 1000;
 }
 
@@ -228,85 +183,9 @@ section{
 
 .music-player #close{
    position: absolute;
-   top:2rem; 
+   top:2rem;
    right:2rem;
    cursor: pointer;
    color:#fff;
    font-size: 4rem;
-}
-/* Reset */
-
-
-/* Background */
-body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
-
-/* Form Container */
-.form-container{
-    width: 400px;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    text-align:center;
-}
-
-/* Title */
-.form-container h3{
-    color:white;
-    margin-bottom: 25px;
-    font-size: 28px;
-}
-
-/* Inputs */
-.form-container input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:none;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
-}
-
-/* Button */
-.btn{
-   width:100%;
-   padding:12px;
-   margin-top:15px;
-   background:#8e44ad;
-   color:white;
-   border:none;
-   border-radius:8px;
-   cursor:pointer;
-   font-size:16px;
-   font-weight:bold;
-   transition:0.3s;
-}
-
-.btn:hover{
-    background:#9333ea;
-}
-
-/* Link text */
-.form-container p{
-    margin-top:15px;
-    color:white;
-    font-size:14px;
-}
-
-.form-container a{
-    color:#a855f7;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.form-container a:hover{
-    text-decoration:underline;
 }
