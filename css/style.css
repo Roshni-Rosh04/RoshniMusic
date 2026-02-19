@@ -119,6 +119,7 @@ section{
 /* ================= PLAYLIST ================= */
 
 .playlist .box-container{
+   background-image: url("../images/bg1.jpg");
    max-width: 50rem;
    height: 85vh;
    overflow-y: auto;
