@@ -281,11 +281,17 @@ body{
 
 /* Button */
 .btn{
-    background: #a855f7;
-    color:white;
-    cursor:pointer;
-    transition:0.3s ease;
-    font-weight:bold;
+   width:100%;
+   padding:12px;
+   margin-top:15px;
+   background:#8e44ad;
+   color:white;
+   border:none;
+   border-radius:8px;
+   cursor:pointer;
+   font-size:16px;
+   font-weight:bold;
+   transition:0.3s;
 }
 
 .btn:hover{
