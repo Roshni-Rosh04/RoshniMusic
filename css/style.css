@@ -119,7 +119,7 @@ section{
 /* ================= PLAYLIST ================= */
 
 .playlist .box-container{
-   background-image: url("../images/bg1.jpg");
+   
    max-width: 50rem;
    height: 85vh;
    overflow-y: auto;
@@ -235,12 +235,7 @@ section{
    font-size: 4rem;
 }
 /* Reset */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 /* Background */
 body{
